@@ -17,21 +17,24 @@ Write the following functions:
 
 function createProduct(partialProduct, callback) {
   const product = {
-    id: 'prefix' + Date.now(),
-    ...partialProduct
-  }
+    id: "prefix" + Date.now(),
+    ...partialProduct,
+  };
 
-  callback(product)
+  callback(product);
 }
 
 function logProduct(product) {
-  console.log(product)
+  console.log(product);
 }
 
 function logTotalPrice(product) {
-  console.log(product.price * product.quantity)
+  console.log(product.price * product.quantity);
 }
 
 createProduct({ name: "🍎", price: 30, quantity: 3 }, logProduct);
 createProduct({ name: "🍋", price: 20, quantity: 5 }, logTotalPrice);
-
+createProduct({ name: "🍊", price: 15, quantity: 10 }, logProduct);
+createProduct({ name: "🍇", price: 40, quantity: 2 }, logTotalPrice);
+createProduct({ name: "🍌", price: 12, quantity: 6 }, logProduct);
+createProduct({ name: "🍓", price: 25, quantity: 4 }, logTotalPrice);

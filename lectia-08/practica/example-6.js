@@ -5,8 +5,8 @@
 import { cars } from "./carsData.js";
 
 const getCarByModel = (cars, model) => {
-    return cars.find( car => car.model === model);
+  return cars.find((car) => car.model === model);
 };
 
 console.log(getCarByModel(cars, "F-150"));
-// console.log(getCarByModel(cars, "CX-9"));
+console.log(getCarByModel(cars, "CX-9"));

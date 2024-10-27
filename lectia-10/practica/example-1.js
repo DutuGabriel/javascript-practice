@@ -20,7 +20,7 @@ number of posts to add to the user.
 */
 
 class Blogger {
-  constructor({email, age, numberOfPosts, topics}) {
+  constructor({ email, age, numberOfPosts, topics }) {
     this.age = age;
     this.email = email;
     this.numberOfPosts = numberOfPosts;
@@ -39,26 +39,24 @@ class Blogger {
 }
 
 const mango = new Blogger({
-  email: "mango@mail.com",
-  age: 24,
-  numberOfPosts: 20,
-  topics: ["tech", "cooking"],
+  email: "mango@example.com",
+  age: 30,
+  numberOfPosts: 15,
+  topics: ["travel", "photography"],
 });
-console.log(mango.getInfo()); // User mango@mail.com is 24 years old and has 20 posts
-mango.updatePostCount(5);
-mango.updatePostCount(10);
-console.log(mango.getInfo()); // User mango@mail.com is 24 years old and has 25 posts
-mango.test = 7;
+console.log(mango.getInfo());
+mango.updatePostCount(3);
+mango.updatePostCount(7);
+console.log(mango.getInfo());
 console.log(mango);
 
 const poly = new Blogger({
-  email: "poly@mail.com",
-  age: 19,
-  numberOfPosts: 17,
-  topics: ["sports", "gaming", "health"],
+  email: "poly@example.com",
+  age: 22,
+  numberOfPosts: 10,
+  topics: ["music", "movies", "fashion"],
 });
-console.log(poly.getInfo()); // User poly@mail.com is 19 years old and has 17 posts
-poly.updatePostCount(4);
-console.log(poly.getInfo()); // User poly@mail.com is 19 years old and has 21 posts
+console.log(poly.getInfo());
+poly.updatePostCount(5);
+console.log(poly.getInfo());
 console.log(poly);
-

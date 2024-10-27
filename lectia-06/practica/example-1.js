@@ -8,8 +8,8 @@ of independent arguments.
 */
 
 function calcBMI(bmi) {
-  const { weight, height } = bmi; 
-  const numericWeight = Number(weight.replace(",", ".")); 
+  const { weight, height } = bmi;
+  const numericWeight = Number(weight.replace(",", "."));
   const numericHeight = Number(height.replace(",", "."));
   return Number((numericWeight / numericHeight ** 2).toFixed(1));
 }
@@ -38,6 +38,3 @@ console.log(
     height: "1.95",
   })
 );
-
-
-

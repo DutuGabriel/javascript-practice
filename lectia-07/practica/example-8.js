@@ -19,3 +19,8 @@ printContactsInfo({
   names: "Jacob,William,Solomon,Artemis",
   phones: "89001234567,89001112233,890055566377,890055566300",
 });
+
+printContactsInfo({
+  names: "Alice,Bob,Charlie,Diana",
+  phones: "07123456789,07234567890,07345678901,07456789012",
+});

@@ -8,7 +8,7 @@ of independent arguments.
 */
 
 function printContactsInfo(arg) {
-  const { names: listOfNames, phones: listOfPhones } =arg;
+  const { names: listOfNames, phones: listOfPhones } = arg;
 
   const nameList = listOfNames.split(",");
   const phoneList = listOfPhones.split(",");
@@ -17,15 +17,17 @@ function printContactsInfo(arg) {
   }
 }
 
-// It was
-// printContactsInfo(
-//   'Jacob,William,Solomon,Artemis',
-//   '89001234567,89001112233,890055566377,890055566300',
-// );
+// printContactsInfo({
+//   names:
+//     "Andrei,Elena,Mihai,Ioana,Alexandra,Florin,Simona,Victor,Claudia,Marian",
+//   phones:
+//     "0723456789,0734567890,0745678901,0756789012,0767890123,0778901234,0789012345,0790123456,0701234567,0712345678",
+// });
 
 // Is expected
 printContactsInfo({
-  names: "Jacob,William,Solomon,Artemis",
-  phones: "89001234567,89001112233,890055566377,890055566300",
+  names:
+    "Andrei,Elena,Mihai,Ioana,Alexandra,Florin,Simona,Victor,Claudia,Marian",
+  phones:
+    "0723456789,0734567890,0745678901,0756789012,0767890123,0778901234,0789012345,0790123456,0701234567,0712345678",
 });
-

@@ -11,18 +11,18 @@ guaranteed to be the same.
 */
 
 function printContactsInfo(names, phones) {
-    const arrayOfNames = names.split(',');
-    const arrayOfPhones = phones.split(',');
+  const arrayOfNames = names.split(",");
+  const arrayOfPhones = phones.split(",");
 
-    console.log(arrayOfNames);
-    console.log(arrayOfPhones);
+  console.log(arrayOfNames);
+  console.log(arrayOfPhones);
 
-    for (let i = 0; i < arrayOfNames.length; i++) {
-        console.log(`${arrayOfNames[i]} - ${arrayOfPhones[i]}`);
-    }
+  for (let i = 0; i < arrayOfNames.length; i++) {
+    console.log(`${arrayOfNames[i]} - ${arrayOfPhones[i]}`);
+  }
 }
 
 printContactsInfo(
-  "Jacob,William,Solomon,Artemis",
-  "89001234567,89001112233,890055566377,890055566300"
+  "Jacob,William,Solomon,Artemis,Isabella,Liam,Noah,Emma",
+  "89001234567,89001112233,890055566377,890055566300,89007778899,89002221100,89009998888,89008887777"
 );

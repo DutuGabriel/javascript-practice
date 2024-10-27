@@ -25,21 +25,21 @@ const phonebook = {
   },
 
   get() {
-    return this.contacts
-  }
+    return this.contacts;
+  },
 };
 
 console.log(
   phonebook.add({
-    name: "Mango",
-    email: "mango@mail.com",
+    name: "Nelu",
+    email: "Nelu@mail.com",
     list: "friends",
   })
 );
 console.log(
   phonebook.add({
-    name: "Poly",
-    email: "poly@hotmail.com",
+    name: "Yamal",
+    email: "Yamal@hotmail.com",
   })
 );
 

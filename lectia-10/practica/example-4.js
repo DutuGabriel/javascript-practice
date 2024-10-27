@@ -18,10 +18,10 @@ Add methods`addNote(note)`, `removeNote(text)` and
 
 class Notes {
   static Priority = {
-    LOW: 'low',
-    NORMAL: 'normal',
-    HIGH: 'high'
-  }
+    LOW: "low",
+    NORMAL: "normal",
+    HIGH: "high",
+  };
 
   constructor(notes) {
     this.items = notes;
@@ -32,21 +32,21 @@ class Notes {
   }
 
   removeNote(text) {
-    const index = this.items.findIndex( (el) => {
+    const index = this.items.findIndex((el) => {
       return el.text === text;
     });
 
     if (index === -1) {
-      console.log('Nu exista nota cu acest text');
+      console.log("Nu exista nota cu acest text");
       return;
     }
     this.items.splice(index, 1);
   }
 
   updatePriority(text, newPriority) {
-    const index = this.items.findIndex( (el) => el.text === text);
+    const index = this.items.findIndex((el) => el.text === text);
     if (index === -1) {
-      console.log('Nu exista nota cu acest text');
+      console.log("Nu exista nota cu acest text");
       return;
     }
     this.items[index].priority = newPriority;
@@ -70,6 +70,5 @@ console.log(myNotes.items);
 myNotes.updatePriority("My second note", Notes.Priority.HIGH);
 console.log(myNotes.items);
 
-myNotes.updatePriority('My first note', Notes.Priority.HIGH);
+myNotes.updatePriority("My first note", Notes.Priority.HIGH);
 console.log(myNotes.items);
-

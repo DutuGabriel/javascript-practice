@@ -10,23 +10,23 @@ quantity from the `stones` property.
 
 const chopShop = {
   stones: [
-    { name: "Emerald", price: 1300, quantity: 4 },
-    { name: "Diamond", price: 2700, quantity: 3 },
+    { name: "Emerald", price: 2500, quantity: 4 },
+    { name: "Diamond", price: 2900, quantity: 3 },
     { name: "Sapphire", price: 1400, quantity: 7 },
-    { name: "Ruby", price: 800, quantity: 2 },
+    { name: "Ruby", price: 5000, quantity: 5 },
   ],
   calcTotalPrice(stoneName) {
     const stone = this.stones.find((element) => element.name === stoneName);
 
     if (!stone) {
-      return `Nu Avem piatra cu numele de ${stoneName}`
+      return `Nu avem piatra cu numele de ${stoneName}`;
     }
 
     return stone.price * stone.quantity;
   },
 };
 
-console.log(chopShop.calcTotalPrice("Emerald")); // 5200
-console.log(chopShop.calcTotalPrice("Diamond")); // 8100
-console.log(chopShop.calcTotalPrice("Sapphire")); // 9800
-console.log(chopShop.calcTotalPrice("Ruby")); // 1600
+console.log(chopShop.calcTotalPrice("Emerald"));
+console.log(chopShop.calcTotalPrice("Diamond"));
+console.log(chopShop.calcTotalPrice("Sapphire"));
+console.log(chopShop.calcTotalPrice("Ruby"));

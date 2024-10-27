@@ -9,26 +9,26 @@ get 390. If the `salaries` object is empty, then the result should be 0.
 */
 
 const salaries = {
-  John: 100,
-  Ann: 160,
-  Pete: 130,
+  John: 200,
+  Ann: 200,
+  Pete: 140,
 };
 
 let sumA = 0;
 
-const salariesList = Object.values(salaries)
+const salariesList = Object.values(salaries);
 
 for (let i = 0; i < salariesList.length; i++) {
   sumA += salariesList[i];
   // sumA = sumA + salariesList[i]; // unul si acelasi lucru cu expresia de mai sus
 }
 
-console.log(sumA)
+console.log(sumA);
 
-// let sumB = 0;
+let sumB = 0;
 
-// for (const key in salaries) {
-//   sumB += salaries[key];
-// }
+for (const key in salaries) {
+  sumB += salaries[key];
+}
 
-// console.log(sumB)
+console.log(sumB);

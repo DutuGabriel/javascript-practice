@@ -35,9 +35,9 @@ const account = {
       id: this.transactionId,
       amount: amount,
       type,
-    }
+    };
     this.transactionId++;
-    
+
     return newTransaction;
   },
 
@@ -48,7 +48,7 @@ const account = {
    * then adds it to the transaction history
    */
   deposit(amount) {
-    this.transactions.push(this.createTransaction(amount, Transaction.DEPOSIT))
+    this.transactions.push(this.createTransaction(amount, Transaction.DEPOSIT));
     this.balance += amount;
   },
 
@@ -61,16 +61,17 @@ const account = {
    * about the fact that the withdrawal of such an amount is not possible, there are not enough funds.
    */
   withdraw(amount) {
-
     if (amount > this.balance) {
-      console.log('Nu exista suficienti bani in cont');
+      console.log("Nu exista suficienti bani in cont");
       return;
     }
 
     if (amount < this.balance) {
       console.log(`Poti retrage mai multi bani decat ${amount} RON`);
     }
-    this.transactions.push(this.createTransaction(amount, Transaction.WITHDRAW))
+    this.transactions.push(
+      this.createTransaction(amount, Transaction.WITHDRAW)
+    );
 
     this.balance -= amount;
   },
@@ -79,7 +80,7 @@ const account = {
    * The method returns the current balance
    */
   getBalance() {
-    console.log(`Balanta este ${this.balance}`)
+    console.log(`Balanta este ${this.balance}`);
   },
 
   /*
@@ -88,7 +89,9 @@ const account = {
   getTransactionDetails(id) {
     for (const item of this.transactions) {
       if (item.id === id) {
-        console.dir(`Tranzactia cu id-ul ${item.id} - valoare: ${item.amount} - tipul: ${item.type}`);
+        console.dir(
+          `Tranzactia cu id-ul ${item.id} - valoare: ${item.amount} - tipul: ${item.type}`
+        );
 
         return item;
       }
@@ -114,11 +117,16 @@ const account = {
   },
 };
 
-account.getBalance()
-account.deposit(500)
-account.getBalance()
-account.withdraw(400)
-account.withdraw(50)
-account.withdraw(250)
-account.getTransactionDetails(1)
-account.getTransactionTotal(Transaction.WITHDRAW)
+account.getBalance();
+account.deposit(500);
+account.getBalance();
+account.withdraw(400);
+account.withdraw(50);
+account.withdraw(250);
+account.getTransactionDetails(1);
+account.deposit(500);
+account.getBalance();
+account.deposit(500);
+account.withdraw(2000);
+account.getTransactionDetails(1);
+account.getTransactionTotal(Transaction.WITHDRAW);

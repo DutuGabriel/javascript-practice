@@ -7,18 +7,18 @@ the value of the `on` property should be `false`.
 */
 
 class Toggle {
-    constructor(arg) {
-        if(arg && arg.isOpen) {
-            this.on = arg.isOpen;
-            return;
-        }
-        // In cazul in care nu trimit niciun argument, se seteaza valoarea default
-        this.on = false;
+  constructor(arg) {
+    if (arg && arg.isOpen) {
+      this.on = arg.isOpen;
+      return;
     }
+    // In cazul in care nu trimit niciun argument, se seteaza valoarea default
+    this.on = false;
+  }
 
-    toggle() {
-        this.on = !this.on;
-    }
+  toggle() {
+    this.on = !this.on;
+  }
 }
 
 const firstToggle = new Toggle({ isOpen: true });

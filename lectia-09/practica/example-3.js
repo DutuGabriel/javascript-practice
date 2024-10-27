@@ -16,14 +16,18 @@ const calculator = {
     this.secondNumber = secondValue;
   },
   add() {
-    return `Suma celor doua numere este ${this.firstNumber + this.secondNumber}`
+    return `Suma celor doua numere este ${
+      this.firstNumber + this.secondNumber
+    }`;
   },
   mult() {
-    return `Produsul celor doua numere este ${this.firstNumber * this.secondNumber}`
-  }
+    return `Produsul celor doua numere este ${
+      this.firstNumber * this.secondNumber
+    }`;
+  },
 };
 
-calculator.read(5, 3);
+calculator.read(4, 30);
 
-console.log(calculator.add())
-console.log(calculator.mult())
+console.log(calculator.add());
+console.log(calculator.mult());

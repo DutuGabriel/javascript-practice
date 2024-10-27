@@ -13,36 +13,47 @@ Add class methods:
 */
 
 class Storage {
-    constructor(items) {
-        this.items = items;
+  constructor(items) {
+    this.items = items;
+  }
+
+  getItems() {
+    return this.items;
+  }
+
+  addItem(item) {
+    this.items.push(item);
+  }
+
+  removeItem(item) {
+    const index = this.items.indexOf(item);
+    if (index === -1) {
+      console.log("Elementul nu exista in stoc");
+      return;
     }
 
-    getItems() {
-        return this.items;
-    }
-
-    addItem(item) {
-        this.items.push(item);
-    }
-    
-    removeItem(item) {
-        const index = items.indexOf(item);
-        if (index === -1) {
-            console.log('Elementul nu exista in stoc');
-            return;
-        }
-
-        items.splice(index, 1);
-    }
+    this.items.splice(index, 1);
+  }
 }
 
 const storage = new Storage(["🍎", "🍋", "🍇", "🍑"]);
 
 const items = storage.getItems();
-console.table(items); // [ '🍎', '🍋', '🍇', '🍑' ]
+console.table(items);
 
 storage.addItem("🍌");
-console.table(storage.items); // [ '🍎', '🍋', '🍇', '🍑', '🍌' ]
+console.table(storage.items);
 
 storage.removeItem("🍋");
-console.table(storage.items); // [ '🍎', '🍇', '🍑', '🍌' ]
+console.table(storage.items);
+
+storage.addItem("🍍");
+console.table(storage.items);
+
+storage.addItem("🍉");
+console.table(storage.items);
+
+storage.removeItem("🍑");
+console.table(storage.items);
+
+storage.removeItem("🍒");

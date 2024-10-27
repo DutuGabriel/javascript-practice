@@ -7,13 +7,13 @@ only those that are currently for sale.
 import { cars } from "./carsData.js";
 
 const getModelsOnSale = (cars) => {
-    return cars
-        .filter(car => car.onSale)
-        .map(car => {
-            return {
-                name: `${car.make} - ${car.model}`
-            };
-        });
+  return cars
+    .filter((car) => car.onSale)
+    .map((car) => {
+      return {
+        name: `${car.make} - ${car.model}`,
+      };
+    });
 };
 
 console.table(getModelsOnSale(cars));

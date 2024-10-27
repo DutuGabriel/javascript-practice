@@ -11,13 +11,13 @@ will print `1 - Mango` and for index 2 will print `3 - Ajax`.
 */
 
 function logItems(items) {
-    for (let i = 0; i < items.length; i++) {
-        const numberOfItem = i + 1;
-        const value = items[i];
-        // console.log(`${numberOfItem} - ${value}`);
-        console.log(numberOfItem + ' - ' + value);
-    }
+  for (let i = 0; i < items.length; i++) {
+    const numberOfItem = i + 1;
+    const value = items[i];
+    console.log(`${numberOfItem} - ${value}`);
+    console.log(numberOfItem + " - " + value);
+  }
 }
 
-logItems(["Mango", "Poly", "Ajax"]);
+logItems(["Mango", "Poly", "Ajax", "Hermes", "Apollo"]);
 logItems(["🍎", "🍇", "🍑", "🍌", "🍋"]);

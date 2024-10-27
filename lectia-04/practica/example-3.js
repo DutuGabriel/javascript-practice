@@ -9,11 +9,11 @@ Values are guaranteed to be separated by a space.
 */
 
 function getRectArea(dimensions) {
-    const values = dimensions.split(' ');
-    const dimensionA = Number(values[0]);
-    const dimensionB = Number(values[1]);
-    // return 'Fac ce vreau eu';
-    return dimensionA * dimensionB; 
+  const values = dimensions.split(" ");
+  const dimensionA = Number(values[0]);
+  const dimensionB = Number(values[1]);
+
+  return dimensionA * dimensionB;
 }
 
-console.log(getRectArea("8 11"));
+console.log(getRectArea("10 20"));

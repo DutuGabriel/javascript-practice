@@ -10,18 +10,17 @@ Write a script that, for the `user` object, successively:
 */
 
 const user = {
-  name: "Mango",
-  age: 20,
-  hobby: "html",
-  name: 'Polly',
+  name: "Luna",
+  age: 25,
+  hobby: "coding",
+  name: "Stella",
   premium: true,
 };
 
-user.mood = 'happy';
-user.hobby = 'skydiving';
+user.mood = "excited";
+user.hobby = "surfing";
 user.premium = false;
-
-console.log(user)
+console.log(user);
 
 // for (const key in user) {
 //   console.log(`${key} - ${user[key]}`)
@@ -29,9 +28,8 @@ console.log(user)
 
 const keys = Object.keys(user);
 
-console.log(keys)
+console.log(keys);
 
 for (const key of keys) {
-  console.log(`${key} - ${user[key]}`)
+  console.log(`${key} - ${user[key]}`);
 }
-

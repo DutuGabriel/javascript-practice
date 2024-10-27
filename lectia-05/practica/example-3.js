@@ -18,10 +18,10 @@ const stones = [
 */
 
 const stones = [
-  { name: "Emerald", price: 1300, quantity: 4 },
-  { name: "Diamond", price: 2700, quantity: 3 },
-  { name: "Sapphire", price: 400, quantity: 7 },
-  { name: "Rubble", price: 200, quantity: 2 },
+  { name: "Emerald", price: 2000, quantity: 21 },
+  { name: "Diamond", price: 3000, quantity: 3 },
+  { name: "Sapphire", price: 11000, quantity: 7 },
+  { name: "Rubble", price: 140, quantity: 12 },
 ];
 
 function calcTotalPrice(stones, stoneName) {
@@ -31,7 +31,7 @@ function calcTotalPrice(stones, stoneName) {
     }
   }
 
-  return 'Piatra nu a fost gasita in lista';
+  return "The stone was not found in the list";
 }
 
 console.log(calcTotalPrice(stones, "Diamond"));

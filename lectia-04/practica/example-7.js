@@ -5,19 +5,19 @@ and returns their average. All arguments will be only numbers.
 */
 
 function calAverage() {
-    let total = 0;
+  let total = 0;
 
-    for (let i = 0; i < arguments.length; i++) {
-        total = total + arguments[i];
-    }
+  for (let i = 0; i < arguments.length; i++) {
+    total = total + arguments[i];
+  }
 
-    const average = total / arguments.length;
+  const average = total / arguments.length;
 
-    return total / arguments.length;
+  //return total / arguments.length;
 
-    // return average;
+  return average;
 }
 
-console.log(calAverage(1, 2, 3, 4)); // 2.5
-console.log(calAverage(14, 8, 2)); // 8
-console.log(calAverage(27, 43, 2, 8, 36)); // 23.2
+console.log(calAverage(1, 2, 3, 4));
+console.log(calAverage(5, 10, 15, 20, 25));
+console.log(calAverage(99, 100, 101));

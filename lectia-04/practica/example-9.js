@@ -25,35 +25,34 @@ console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
 const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
 
 function addCourse(courseName) {
-    if (courses.indexOf(courseName) > -1) {
-        console.log(' You already have this course');
-        return;
-    }
-    courses.push(courseName);
+  if (courses.indexOf(courseName) > -1) {
+    console.log(" You already have this course");
+    return;
+  }
+  courses.push(courseName);
 }
 
 function removeCourse(courseName) {
-    const courseIndex = courses.indexOf(courseName);
+  const courseIndex = courses.indexOf(courseName);
 
-    if (courseIndex === -1) {
-        console.log('Course with this name was not found');
-        return;
-    }
+  if (courseIndex === -1) {
+    console.log("Course with this name was not found");
+    return;
+  }
 
-    courses.splice(courseIndex, 1);
+  courses.splice(courseIndex, 1);
 }
 
 function updateCourse(oldCourse, newCourse) {
-    const courseIndex = courses.indexOf(oldCourse);
+  const courseIndex = courses.indexOf(oldCourse);
 
-    if (courseIndex === -1) {
-        console.log('Course with this name was not found');
-        return;
-    }
+  if (courseIndex === -1) {
+    console.log("Course with this name was not found");
+    return;
+  }
 
-    courses.splice(courseIndex, 1, newCourse);
+  courses.splice(courseIndex, 1, newCourse);
 }
-
 
 addCourse("Express");
 console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL', 'Express']

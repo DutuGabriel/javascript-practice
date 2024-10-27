@@ -8,10 +8,9 @@ of independent arguments.
 
 */
 
-
 function getBotReport(arg) {
   const { companyName, bots } = arg;
-  const {defence: defenceBots, repair: repairBots} = bots;
+  const { defence: defenceBots, repair: repairBots } = bots;
   return `${companyName} has ${repairBots + defenceBots} bots in stock`;
 }
 
@@ -28,5 +27,3 @@ console.log(
     },
   })
 ); // "Cyberdyne Systems has 200 bots in stock"
-
-

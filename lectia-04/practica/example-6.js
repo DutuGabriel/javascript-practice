@@ -5,16 +5,18 @@ array.
 */
 
 function findLargestNumber(numbers) {
-    let max = numbers[0];
+  let max = numbers[0];
 
-    for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] > max) {
-            max = numbers[i];
-        }
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+      max = numbers[i];
     }
+  }
 
-    return max;
+  return max;
 }
 
-console.log(findLargestNumber([2, 17, 94, 1, 23, 37])); // 94
-console.log(findLargestNumber([49, 4, 7, 83, 12])); // 83
+console.log(findLargestNumber([3, 9, 1, 6, 8, 2]));
+console.log(findLargestNumber([102, 55, 87, 43, 90]));
+console.log(findLargestNumber([9, 21, 34, 99, 18, 77]));
+console.log(findLargestNumber([1001, 342, 889, 1234, 523]));

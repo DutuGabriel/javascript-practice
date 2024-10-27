@@ -17,36 +17,36 @@ or either zero and onSuccess otherwise.
 const TRANSACTION_LIMIT = 1000;
 
 const account = {
-  username: "Jacob",
-  balance: 400,
+  username: "Gareth",
+  balance: 600,
   withdraw(amount, onSuccess, onError) {
-    if(amount > TRANSACTION_LIMIT) {
-        onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`)
+    if (amount > TRANSACTION_LIMIT) {
+      onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
     } else if (amount > this.balance) {
-        onError(`Amount can't exceed acount balance of ${this.balance} credits`)
+      onError(`Amount can't exceed acount balance of ${this.balance} credits`);
     } else {
-        this.balance -= amount;
-        onSuccess(`Account balance: ${this.balance}`)
+      this.balance -= amount;
+      onSuccess(`Account balance: ${this.balance}`);
     }
   },
   deposit(amount, onSuccess, onError) {
-    if(amount > TRANSACTION_LIMIT) {
-        onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`)
-    } else if(amount <= 0) {
-        onError(`Amount must be more than 0 credits`)
+    if (amount > TRANSACTION_LIMIT) {
+      onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
+    } else if (amount <= 0) {
+      onError(`Amount must be more than 0 credits`);
     } else {
-        this.balance += amount;
-        onSuccess(`Account balance: ${this.balance}`)
+      this.balance += amount;
+      onSuccess(`Account balance: ${this.balance}`);
     }
   },
 };
 
 function handleSuccess(message) {
-    console.log(`✅ Success! ${message}`)
+  console.log(`✅ Success! ${message}`);
 }
 
 function handleError(message) {
-    console.log(`❌ Error! ${message}`)
+  console.log(`❌ Error! ${message}`);
 }
 
 account.withdraw(2000, handleSuccess, handleError);
@@ -56,3 +56,5 @@ account.deposit(1700, handleSuccess, handleError);
 account.deposit(0, handleSuccess, handleError);
 account.deposit(-600, handleSuccess, handleError);
 account.deposit(600, handleSuccess, handleError);
+account.deposit(1, handleSuccess, handleError);
+account.withdraw(201, handleSuccess, handleError);
